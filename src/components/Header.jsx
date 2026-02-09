@@ -9,7 +9,9 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
     const pathname = usePathname();
+
     const myProducts = useSelector((data)=>data.myProductsData.myproducts)
+    const myFavproducts = useSelector((data)=>data.myFavProductsData. myFavProducts)
     if(pathname.startsWith('/dashboard')) return <></>;
     return (
         <>
@@ -23,7 +25,9 @@ const Header = () => {
           <NavLink href="/products">products</NavLink>
           <NavLink href="/register">register</NavLink>
           <NavLink href="/login">login</NavLink>
-          <NavLink href="/myproducts">Myproducts <span>{myProducts.length}</span></NavLink>
+          <NavLink href="/myproducts">myproducts <span>{myProducts.length}</span></NavLink>
+          <NavLink href="/myfavproduct">myproducts <span>{myFavproducts.length}</span> </NavLink>
+
            </nav>
         </div>
         <Banner></Banner>
