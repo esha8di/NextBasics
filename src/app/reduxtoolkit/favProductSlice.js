@@ -38,15 +38,4 @@ const Slice = createSlice({
 
 export const {addFavProducts,name,deletefav} = Slice.actions;
 export default Slice.reducer;
-        addFavProduct:(state,action)=>{
-
-            
-        }
         
-        
-    }
-
-})
- 
-export const {addFavProduct} = Slice.actions;
-export default Slice.reducer;

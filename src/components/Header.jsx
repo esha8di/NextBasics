@@ -26,11 +26,7 @@ const Header = () => {
           <NavLink href="/register">register</NavLink>
           <NavLink href="/login">login</NavLink>
           <NavLink href="/myproducts">myproducts <span>{myProducts.length}</span></NavLink>
-<<<<<<< HEAD
-=======
-          <NavLink href="/myfavproduct">myproducts <span>{myFavproducts.length}</span> </NavLink>
 
->>>>>>> 3fceaa7844bb911b08ac34e990f29ed32bff26bf
            </nav>
         </div>
         <Banner></Banner>
