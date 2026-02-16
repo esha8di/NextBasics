@@ -27,7 +27,7 @@ const Cards = ({ product }) => {
           <div className="mt-auto">
             <Link href={`/products/${product.id}`}>
                 <button
-             className="w-full py-2 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition">
+             className="w-full btn py-2 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition">
               Product Details
             </button></Link>
             

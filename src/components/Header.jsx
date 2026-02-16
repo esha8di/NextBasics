@@ -13,7 +13,7 @@ const Header = () => {
     if(pathname.startsWith('/dashboard')) return <></>;
     return (
         <>
-        <div className='h-[70px] flex justify-between p-2 pt-3  text-black bg-linear-60 from-sky-300 to-sky-500' >
+        <div className='h-[70px] flex justify-between p-2 pt-3  text-black bg-linear-60 from-green-300 to-green-500' >
          <Link href="/" className='font-bold text-2xl'>
               🎂 My Story
          </Link>
@@ -23,7 +23,7 @@ const Header = () => {
           <NavLink href="/products">products</NavLink>
           <NavLink href="/register">register</NavLink>
           <NavLink href="/login">login</NavLink>
-          <NavLink href="/myproducts">Myproducts <span>{myProducts.length}</span></NavLink>
+          <NavLink href="/myproducts">myproducts <span>{myProducts.length}</span></NavLink>
            </nav>
         </div>
         <Banner></Banner>

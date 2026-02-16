@@ -8,6 +8,7 @@ const Slice = createSlice({
     initialState,
     reducers:{
         addFavProduct:(state,action)=>{
+
             
         }
         
@@ -15,3 +16,6 @@ const Slice = createSlice({
     }
 
 })
+ 
+export const {addFavProduct} = Slice.actions;
+export default Slice.reducer;

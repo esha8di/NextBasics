@@ -6,3 +6,4 @@ const { store } = require("./store")
 export const Providers = ({children}) =>{
     return <Provider store={store}>{children}</Provider>
 }
+
