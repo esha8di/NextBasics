@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-
+import { useDispatch } from "react-redux";
+import { addFavProducts } from "@/app/reduxtoolkit/favProductSlice";
 const Cards = ({ product }) => {
+  const dispatch =useDispatch()
+  
   return (
     <div className="border border-white">
       <div className="transition-all group duration-300 ease-out  overflow-hidden flex flex-col flex-grow">
@@ -21,6 +24,7 @@ const Cards = ({ product }) => {
             <p className="font-bold text-indigo-600">
               {product.price}
               <span className="text-sm">TK</span>
+              <button onClick={()=>dispatch(addFavProducts(product))} className=" p-1 ">❤️</button>
             </p>
           </div>
 

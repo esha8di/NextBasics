@@ -37,7 +37,11 @@ const ProductClient = ({ product }) => {
           <div className="card-actions justify-end">
             <button
               onClick={handleAddToCart}
+<<<<<<< HEAD
               className="btn text-white rounded px-3 py-1 hover:bg-blue-700"
+=======
+              className="btn text-white rounded px-3 py-1 hover:bg-green-800"
+>>>>>>> 3fceaa7844bb911b08ac34e990f29ed32bff26bf
             >
               Add to Cart
             </button>
