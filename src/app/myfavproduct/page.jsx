@@ -9,7 +9,7 @@ const MyFavproducts = () => {
     return (
         <div>
             {
-                favProducts.map((product)=><li key={product.id}>{product.title}<span onClick={()=>dispatch(deletefav(product))}>❌</span></li>)
+                favProducts.map((product)=><li  key={product.id}>{product.title}<span className='cursor-pointer' onClick={()=>dispatch(deletefav(product))}>❌</span></li>)
             }
         </div>
     );

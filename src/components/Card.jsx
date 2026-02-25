@@ -1,10 +1,13 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addFavProducts } from "@/app/reduxtoolkit/favProductSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavProducts,togglefav } from "@/app/reduxtoolkit/favProductSlice";
 const Cards = ({ product }) => {
   const dispatch =useDispatch()
+  const favProducts = useSelector(data=>data.myFavProductsData.myFavProducts);
+
+  const isFav = favProducts.find(p=>p.id==product.id);
   
   return (
     <div className="border border-white">
@@ -24,7 +27,8 @@ const Cards = ({ product }) => {
             <p className="font-bold text-indigo-600">
               {product.price}
               <span className="text-sm">TK</span>
-              <button onClick={()=>dispatch(addFavProducts(product))} className=" p-1 ">❤️</button>
+              <button onClick={()=>dispatch(togglefav(product))} className="cursor-pointer p-1 ">{
+                isFav? "❤️":"🤍"}</button>
             </p>
           </div>
 

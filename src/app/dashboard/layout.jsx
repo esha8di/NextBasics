@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Layout = ({children}) => {
+   
     return (
         <div className='grid grid-cols-[20%_80%] px-5 py-10 text-left'>
             <div>

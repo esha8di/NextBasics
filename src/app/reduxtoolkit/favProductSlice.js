@@ -11,13 +11,12 @@ const Slice = createSlice({
             const existingproducts = state.myFavProducts.find(item=>item.id==action.payload.id);
 
             if(existingproducts){
-                quantity+=1
+               return;
 
             }
             else{
                 const data={
                    favId : nanoid(),
-                   quantity:1,
                    ...action.payload,
                 }
                 state.myFavProducts.push(data)
@@ -28,6 +27,21 @@ const Slice = createSlice({
         deletefav:(state,action)=>{
             const data = state.myFavProducts.filter((product)=>product.id!= action.payload.id)
             state.myFavProducts=data
+        },
+
+        togglefav:(state,action) =>{
+            const exists = state.myFavProducts.find((porduct)=>porduct.id == action.payload.id)
+            if(exists){
+                state.myFavProducts=state.myFavProducts.filter((product)=>product.id!=action.payload.id)
+
+            }
+            else{
+                state.myFavProducts.push({
+                    favId:nanoid(),
+                    ...action.payload
+
+                })
+            }
         }
 
     }
@@ -36,6 +50,6 @@ const Slice = createSlice({
 
 })
 
-export const {addFavProducts,name,deletefav} = Slice.actions;
+export const {addFavProducts,name,togglefav,deletefav} = Slice.actions;
 export default Slice.reducer;
         
